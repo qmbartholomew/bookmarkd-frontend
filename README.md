@@ -54,3 +54,7 @@ Lorem ipsum dolor amet
 * React
 
 * Mongoose
+
+## Component Tree
+
+Lorem ipsum dolor amet
