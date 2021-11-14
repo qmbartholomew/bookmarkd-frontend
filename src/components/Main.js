@@ -12,7 +12,7 @@ function Main(props) {
     const getBookmark = async () => {
         const response = await fetch(URL)
         const data = await response.json()
-        setbookmark(data)
+        setBookmark(data)
     }
 
     const createBookmark = async (bookmark) => {

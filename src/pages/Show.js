@@ -39,9 +39,9 @@ function Show(props) {
             <form onSubmit={handleSubmit}>
               <input
                 type="text"
-                value={editForm.name}
-                name="name"
-                placeholder="name"
+                value={editForm.title}
+                name="title"
+                placeholder="Bookmark Title"
                 onChange={handleChange}
               />
               <input
@@ -55,7 +55,7 @@ function Show(props) {
                 type="text"
                 value={editForm.url}
                 name="url"
-                placeholder="Webpage Link"
+                placeholder="Website Link"
                 onChange={handleChange}
               />
               <input type="submit" value="Update Bookmark" />
@@ -68,9 +68,9 @@ function Show(props) {
               <a href={bookmark.url}>
                 <img src={bookmark.image} alt={bookmark.name} />
                 <h1>{bookmark.name}</h1>
-                {form}
-                <button onClick={removeBookmark}>DELETE BOOKMARK</button>
               </a>
+              {form}
+              <button onClick={removeBookmark}>DELETE BOOKMARK</button>
             </div>
         )
     } else {
