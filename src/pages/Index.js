@@ -1,81 +1,79 @@
-import {useState} from "react"
-import {Link} from "react-router-dom"
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-function Index(props) {
-  // state to hold formData
-  const [newForm, setNewForm] = useState({
-    title: "",
-    url: "",
-    //countryOfOrigin: "",
-  });
+const Index = (props) => {
 
-  // handleChange function for form
-  const handleChange = (event) => {
-    setNewForm({ ...newForm, [event.target.name]: event.target.value });
-  };
+    const [newForm, setNewForm] = useState({
+        name: '',
+        image: '',
+        title: ''
+    })
 
-  // handle submit function for form
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    props.createBookmark(newForm);
-    setNewForm({
-      title: "",
-      url: "",
-      //countryOfOrigin: "",
-    });
-  };
-
-  // loaded function
-  const loaded = () => {
-    return props.bookmark.map((bookmarkon) => (
-      <div key={bookmarkon._id} className="bookmarkon">
-        <Link to={`/bookmark/${bookmarkon._id}`}>
-          <h1>{bookmarkon.title}</h1>
-        </Link>
-        <img src={bookmarkon.url} alt={bookmarkon.title} />
-        <h3>{bookmarkon.countryOfOrigin}</h3>
-      </div>
-    ));
-  };
-
-  const loading = () => {
-    if (props.bookmark){
-        return props.bookmark.map((bookmarkon) => {
-            return <div key={bookmarkon._id} className="bookmarkon">
-                <Link to={`/bookmark/${bookmarkon._id}`}>
-                    <h1>{bookmarkon.title}</h1>
-                </Link>
-                <img src={bookmarkon.url} alt={bookmarkon.title}/>
-                <h3>{bookmarkon.countryOfOrigin}</h3>
-            </div>
-        })
-    } else {
-    return <h1>Loading...</h1>; 
+    const handleChange = (event) => {
+        const newState = {...newForm}
+        newState[event.target.name] = event.target.value
+        setNewForm(newState)
     }
-  };
-  return (
-    <section>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={newForm.title}
-          name="title"
-          placeholder="title"
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          value={newForm.url}
-          name="url"
-          placeholder="url URL"
-          onChange={handleChange}
-        />
-        
-        <input type="submit" value="Create Bookmark" />
-      </form>
-      {props.bookmark ? loaded() : loading()}
-    </section>
-  );
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        props.createBookmark(newForm)
+        setNewForm({
+            name: '',
+            image: '',
+            title: ''
+        })
+    }
+
+    const form = (
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={newForm.title}
+            name="title"
+            placeholder="Bookmark Title"
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            value={newForm.image}
+            name="image"
+            placeholder="Image URL"
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            value={newForm.url}
+            name="url"
+            placeholder="Website URL"
+            onChange={handleChange}
+          />
+          <input type="submit" value="Create Bookmark" />
+        </form>
+      );
+
+    if(props.bookmark){
+        return (
+            <section>
+                {form}
+            {props.bookmark.map((bookmark) => {
+               return <div key={bookmark._id} className='bookmark'>
+                   <Link to={`/bookmarkd/${bookmark._id}`}>
+                   <h3>{bookmark.title}</h3>
+                   <img src={bookmark.image} alt={bookmark.name} />
+                   </Link>
+               </div> 
+            })}
+            </section>
+            )
+    } else {
+        return (
+        <section>
+            {form}
+            <h1>Loading...</h1>
+        </section>
+            )
+    }
 }
 
-export default Index;
+export default Index
