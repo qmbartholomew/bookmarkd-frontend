@@ -56,6 +56,7 @@ const Index = (props) => {
         return (
             <section>
                 {form}
+                <div class="bookwrap">
             {props.bookmark.map((bookmark) => {
                return <div key={bookmark._id} className='bookmark'>
                    <Link to={`/bookmarkd/${bookmark._id}`}>
@@ -63,7 +64,7 @@ const Index = (props) => {
                    <img src={bookmark.image} alt={bookmark.name} />
                    </Link>
                </div> 
-            })}
+            })} </div>
             </section>
             )
     } else {

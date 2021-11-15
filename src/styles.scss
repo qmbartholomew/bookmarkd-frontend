@@ -1,8 +1,8 @@
 // --------------------------
 // VARIABLES
 // --------------------------
-$maincolor: #1E2D2F;
-$contrastcolor: white;
+$maincolor: #5D4E6D;
+$contrastcolor: #ffffff;
 
 @mixin white-text-black-bg {
   color: $contrastcolor;
@@ -26,12 +26,16 @@ nav {
   justify-content: flex-start;
   width: 90%;
   margin:2% auto;
+  border-radius: 20px;
+  
+
 
   a {
+    text-decoration:none ;
     @include white-text-black-bg;
     div {
       margin: 10px;
-      font-size: large;
+      font-size: x-large;
     }
   }
 }
@@ -46,14 +50,31 @@ div {
     input {
       @include white-text-black-bg;
       padding: 10px;
-      font-size: 1.1em;
+      font-size: .75em;
       margin: 10px;
+      width: 110px;
+      text-align: center;
 
+      &[type="submit"] {
+        background-color: #F9C80E;
+        color:#161032;
+        padding: 5px;
+      }
       &[type="submit"]:hover {
-        @include black-test-white-bg;
+        background-color: #F86624;
+        color:#ffffff;
       }
     }
   }
+}
+
+section form{
+  background-color: #A9E4EF;
+  text-align: center;
+  width: 80%;
+  margin:0px auto;
+  border-radius:20px;
+  border:2px outset black
 }
 
 // --------------------------
@@ -82,13 +103,61 @@ body {
   width:70%;
   margin:0% auto;
   border-radius:10px;
-  background-color: #A9E4EF;
+  // background-size: cover;
   font-family: 'Alfa Slab One', cursive;
+  background: linear-gradient(90deg, hsla(47, 95%, 52%, 1) 0%, hsla(19, 94%, 56%, 1) 0.2%, hsla(251, 52%, 13%, 1) 0.4%, hsla(131, 11%, 49%, 1) 0.6%, hsla(187, 58%, 53%, 1) 0.8%);
+  background: #f9c80e; /* Old browsers */
+  background: -moz-linear-gradient(top, #f9c80e 0%, #f86624 18%, #161032 48%, #708b75 70%, #43bccd 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f9c80e 0%,#f86624 18%,#161032 48%,#708b75 70%,#43bccd 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f9c80e 0%,#f86624 18%,#161032 48%,#708b75 70%,#43bccd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9c80e', endColorstr='#43bccd',GradientType=0 ); /* IE6-9 */
+  
 }
 
 .App {
   border-radius:10px;
-  background-color:#F7CACD ;
+  background-color:#708B75 ;
   padding-top:3% ;
   margin: 3% auto;
+ 
+}
+
+.bookmark{
+  background-color:#161032 ;
+  width:inherit;
+  margin: 20px 10px 20px 10px;
+  font-size: small;
+  padding:10px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ border: 3px dashed #F86624;
+  
+}
+.bookmark a {
+  color:white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.bookmark img{
+  width:40%;
+  height:inherit;
+  margin: 5px 40% 0px 30%;
+  justify-content: center;
+}
+.bookwrap{
+  display:flex;
+  
+}
+.bookmark form{
+  text-align: center;
+  // margin: 5px 40% 0px 25%;
+}
+.bookmark button{
+  margin: auto;
+  width: 110px;
+}
+html{
+  height: 100%;
 }
