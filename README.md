@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Bookmark'd App
+#### By Quentin Bartholomew, Jarathel Jean, and Ras Au-t Amam
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Summary
 
-## Available Scripts
+Bookmark'd is an app that allows a user to bookmark their favorite websites for easy access/navigation. This is an easy alternative to any native browser's bookmarking functionality, and one that will be accessible across all browsers and platforms.
 
-In the project directory, you can run:
+## Components
 
-### `npm start`
+* Header
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Main
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Pages
 
-### `npm test`
+* Index
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Show
 
-### `npm run build`
+## Route Table
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Route | Component | Description |
+|-----|--------|--------|
+| / | <Main /> | Homepage
+| /bookmarks | <Index /> | Displays all active websites bookmarked by user
+| /bookmarks/:id | <Show /> | Displays a specific bookmark
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## User Stories
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+A user should be greeted with a welcome message on the homepage
 
-### `npm run eject`
+A user should be able to view all of their currely bookmarked sites
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+A user should be able to add a new website to their bookmarks
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A user should be able to edit a bookmark
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+A user should be able to delete a bookmark
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+A user should be able to click a bookmark and have a new tab open redirecting them to that website
 
-## Learn More
+## Challenges
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Lorem ipsum dolor amet
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## List of Technologies
 
-### Code Splitting
+* CSS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* JS/Jquery/JSX
 
-### Analyzing the Bundle Size
+* Express
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* React
 
-### Making a Progressive Web App
+* Mongoose
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Component Tree
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Lorem ipsum dolor amet
