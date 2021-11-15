@@ -37,7 +37,7 @@ function Main(props) {
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(bookmarkon)
+        body: JSON.stringify(Bookmarkon)
     })
     // update the list of Bookmark
     getBookmark()

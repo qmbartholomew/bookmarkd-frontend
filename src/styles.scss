@@ -1,7 +1,7 @@
 // --------------------------
 // VARIABLES
 // --------------------------
-$maincolor: black;
+$maincolor: #1E2D2F;
 $contrastcolor: white;
 
 @mixin white-text-black-bg {
@@ -13,6 +13,8 @@ $contrastcolor: white;
   color: $maincolor;
   background-color: $contrastcolor;
 }
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+
 
 // --------------------------
 // Header
@@ -22,6 +24,8 @@ nav {
   @include white-text-black-bg;
   display: flex;
   justify-content: flex-start;
+  width: 90%;
+  margin:2% auto;
 
   a {
     @include white-text-black-bg;
@@ -73,4 +77,18 @@ img {
   height: 300px;
   border-radius: 90px;
   object-fit: cover;
+}
+body {
+  width:70%;
+  margin:0% auto;
+  border-radius:10px;
+  background-color: #A9E4EF;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+.App {
+  border-radius:10px;
+  background-color:#F7CACD ;
+  padding-top:3% ;
+  margin: 3% auto;
 }
