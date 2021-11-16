@@ -41,7 +41,7 @@ A user should be able to click a bookmark and have a new tab open redirecting th
 
 ## Challenges
 
-Lorem ipsum dolor amet
+The initial division of labor was probably our biggest hurdle, however once we had came up with a gameplan it was off to the races. All team members were very quick with their turnaround time, and the day prior to presentations our focus was turned towards the styling.
 
 ## List of Technologies
 
@@ -57,4 +57,8 @@ Lorem ipsum dolor amet
 
 ## Component Tree
 
-Lorem ipsum dolor amet
+* App
+    - Header
+    - Main
+        - Index
+        - Show
