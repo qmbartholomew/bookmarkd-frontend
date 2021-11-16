@@ -47,7 +47,7 @@ The initial division of labor was probably our biggest hurdle, however once we h
 
 * CSS
 
-* JS/Jquery/JSX
+* JS/JSX
 
 * Express
 
