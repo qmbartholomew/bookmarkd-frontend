@@ -7,7 +7,7 @@ function Main(props) {
 
     const [bookmark, setBookmark] = useState(null)
 
-    const URL = 'https://qb-bookmarkd-backend.herokuapp.com/bookmarkd/'
+    const URL = 'https://bookmarkd-backend.netlify.app'
 
     const getBookmark = async () => {
         const response = await fetch(URL)
