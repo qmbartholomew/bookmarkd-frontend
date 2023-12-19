@@ -65,7 +65,7 @@ function Show(props) {
 
         return (
             <div className='bookmark'>
-              <a href={bookmark.url}>
+              <a href={bookmark.url} target='_blank'>
                 <img src={bookmark.image} alt={bookmark.name} />
                 <h1>{bookmark.name}</h1>
               </a>
