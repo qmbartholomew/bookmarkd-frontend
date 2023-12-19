@@ -13,7 +13,7 @@ function Show(props) {
         const bookmark = bookmarks.find((c) => c._id === id)
         setEditForm(bookmark)
         }
-    }, [props.bookmark])
+    }, [props.bookmark, bookmarks, id])
 
     if(props.bookmark) {
         const bookmark = bookmarks.find((c) => c._id === id)
@@ -65,7 +65,7 @@ function Show(props) {
 
         return (
             <div className='bookmark'>
-              <a href={bookmark.url}>
+              <a href={bookmark.url} target='_blank' rel='noreferrer noopener'>
                 <img src={bookmark.image} alt={bookmark.name} />
                 <h1>{bookmark.name}</h1>
               </a>
