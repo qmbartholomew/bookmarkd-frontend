@@ -7,8 +7,7 @@ function Main(props) {
 
     const [bookmark, setBookmark] = useState(null)
 
-
-    const URL = 'https://qb-bookmarkd-backend-96d42c07982c.herokuapp.com/bookmark'
+    const URL = 'https://qb-bookmarkd-backend-96d42c07982c.herokuapp.com/bookmark/'
 
     const getBookmark = async () => {
         const response = await fetch(URL)
