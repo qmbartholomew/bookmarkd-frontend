@@ -70,7 +70,7 @@ function Show(props) {
                 <h1>{bookmark.name}</h1>
               </a>
               {form}
-              <button onClick={removeBookmark}>DELETE BOOKMARK</button>
+              <button onClick={removeBookmark} className='del'>Delete Bookmark</button>
             </div>
         )
     } else {
